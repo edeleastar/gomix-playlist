@@ -1,0 +1,28 @@
+    <table class="ui table">
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Song</th>
+        <th>Artist</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      {{#each songs}}
+        <tr>
+          <td>
+            {{@index}}
+          </td>
+          <td>
+            {{title}}
+          </td>
+          <td>
+            {{artist}}
+          </td>
+          <td>
+            <a href="/deletesong/{{@index}}" class="ui tiny red submit button">Delete Song</a>
+          </td>
+        </tr>
+      {{/each}}
+      </tbody>
+    </table>
